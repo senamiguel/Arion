@@ -4,12 +4,13 @@
 }
 body {
   height: 100vh;
+  position: relative;
   background-color: black;
 }
 header{
   position: fixed;
   width: 100%;
-  height: 9%;
+  height: 8%;
   transition: 1s;
   z-index: 99999999;
   padding: 0 2rem;
@@ -39,7 +40,7 @@ li{
   z-index: 99;
   font-weight: 500;
   width: 100%;
-  height: 60px;
+  height: 50px;
   max-width: 1200px;
   padding-top: 10px;
   position: fixed;
@@ -137,6 +138,37 @@ canvas {
   left:0;
   z-index: -1;
 }
+.dropdown-content{
+  display: none;
+}
+#categorias{
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 74%;
+  left: 44%;
+  background-color: white;
+  color: black;
+  padding: 15px 5px 15px 20px;
+  width: 10%;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+
+
+#categorias:hover ~ .dropdown-content,
+.dropdown-content:hover {
+  display: flex;
+}
+.dropdown__itens{
+  color: black;
+
+  padding: 5px;
+}
 .banner{
   display: flex;
   height: 100%;
@@ -179,6 +211,14 @@ canvas {
 main{
   background-color: rgb(black);
   margin-top: 120px;
+}
+footer{
+  margin-top: 30px!important;
+  color: white;
+  background-color: black;
+  display: flex!important;
+  justify-content: center;
+
 }
 #mission{
   color: white;
