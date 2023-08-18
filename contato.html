@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chimper</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/styles/reset.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/contato/contato.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    
+</head>
+<body>
+    <header class="nav">
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="assets/imgs/logo-arion-branco.png" width="60" height="60" alt="">Árion</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/produtos.html" id="categorias">Categorias<div class="dropdown-content">
+                    <a href="/produtos.html#telescopios" class="dropdown__itens">Telescópios</a>
+                    <a href="/produtos.html#microscopios" class="dropdown__itens">Microscópios</a>
+                    <a href="/produtos.html#lunetas" class="dropdown__itens">Lunetas</a>
+                    <a href="/lembranças.html" class="dropdown__itens">Lembranças</a>
+                </div></a></li>
+                <li><a href="montarpc.html"></a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="nav_icons">
+              <a href="login.html" class="action_btn"><i class="fa-solid fa-user"></i></a>
+              <a href="carrinho.html" class="action_btn"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="produtos.html">Categorias</a></li>
+            <li><a href="lembranças.html">Lembranças</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </div>
+    </header>
+    <main>
+        <div class="main__conteudo">
+            <form action="" class="main__form">
+                <h2 class="form__title">Contact Form</h2>
+                <label id="firstNameLbl"for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName">
+                <label id="lastNameLbl"for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName">
+                <label id="emailLbl" for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label id="subjectLbl"for="subject">Subject</label>
+                <input type="text" name="subject" id="subject">
+                <label id="messageLbl" for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="7"></textarea>
+                <input type="submit" value="SEND MESSAGE" id="submit">
+            </form>
+
+        </div>
+    </main>
+    <script src="assets/scripts/Home/drop.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
+</body>
+</html>

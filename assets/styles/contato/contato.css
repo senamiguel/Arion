@@ -170,128 +170,167 @@
   
     padding: 5px;
   }
-  #produtos{
-    background-color: black;
-    margin-top: 7%;
-    height: 100vh;
-  }
-  .produtos__titulo{
-    color: white;
-    margin-top: 40px;
-    font-size: 30px;
-    letter-spacing: 2px;
-    text-align: center;
-  }
-  .item{
-    text-align: left!important;
-    margin-left: 10%;
-  }
-  .sublinhado{
-    width: 95px;
-    height: 2px;
-    background-color: white;
-    margin: 20px auto;
-  }
-  #telescopios, #microscopios, #lunetas{
-    margin: 10px 0px 15px 10%;
-  }
-  .swiper {
-    width: 95%;
-    height: 95%;
-  
-  }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    height: calc((100% - 30px) / 2) !important;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .produtos__itens{
-    height: 100%;
-    margin: 80px auto;
-  }
-  .slide__title{
-    font-size: 20px;
-    margin-top: 10px;
+.main__conteudo{
+    margin: 100px auto 80px auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr; 
+    gap: 5em;
+}
+.main__form{
+    display: grid;
+    justify-content: center;
+    row-gap: .7em;
+    column-gap: 1em;
+    grid-template-areas: 
+    "titulo titulo"
+    "first-name last-name"
+    "first-name-input last-name-input"
+    "email email"
+    "email-input email-input"
+    "subject subject"
+    "subject-input subject-input"
+    "message message"
+    "message-input message-input";
+}
+.main__conteudo form h2{
+    grid-area: titulo;
+    font-size: 1.5em;
     font-weight: 500;
-  }
-  .slide__money{
-    font-size: 20px;
-    font-weight: 500;
-    font-weight: 600;
-  }
-  .swiper-button-next,.swiper-button-prev{
-    color: rgb(141, 141, 140)
-  
-  }
-  .voltar{
-    position: fixed;
-    bottom: 50px;
-    right: 2%;
-    background-color: orange;
-    padding: 18px;
-    z-index: -5;
-    border-radius: 50%;
+    margin-bottom: 50px;
+}
+input{
+    height: 40px;
+    width: 230px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    padding: 0px 15px;
+    border: 1px solid #adadad;
+    color: #696969;
+    transition: .3s;
+}
+textarea{
+    font-size: 1.2em;
+    color: #696969;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    min-height: 200px;
+    padding: 10px 15px 0px 15px;
+    border: 1px solid #adadad;
     
-  }
-  .show{
-    z-index: 5;
-    transition: all 1s ease;
-  }
-  .slide__button{
-    padding: 10px 20px;
-    font-size: 15px;
-    margin-top: 2px;
-    font-weight: 500;
-    border: 1px solid white;
-    background: black;
+}
+textarea:focus{
+    border: 1px solid #bd0707;
+}
+input:focus{
+    border: 1px solid #bd0707;
+}
+label{
+    font-size: 1.3em;
+    font-weight: 400;
+    color: white;
+}
+#submit{
+    letter-spacing: .1em;
+    padding: 23px 50px 23px 20px;
+    border-radius: 30px;
+    border: none;
+    line-height: 3px;
+    outline: none;
+    background-color: #ffffff;
+    color: black;
+    font-size: .75em;
+    font-weight: 300;
+    width: 150px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: .3s;
+    margin-bottom: 80px;
+    border: 1px solid black;
+}
+#submit:hover{
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    color: white;
+}
+#firstNameLbl{
+    grid-area: first-name;
+}
+#lastNameLbl{
+    grid-area: last-name;
+}
+#emailLbl{
+    grid-area: email;
+}   
+#subjectLbl{
+    grid-area: subject;
+}
+#messageLbl{
+    grid-area: message;
+}
+#firstName{
+    grid-area: first-name-input;
+    font-family: 'Raleway', sans-serif;
+}
+#lastName{
+    grid-area: last-name-input;
+    font-family: 'Raleway', sans-serif;
+}
+#email{
+    grid-area: email-input;
+    width: 94%;
+    font-family: 'Raleway', sans-serif;
+}
+#subject{
+    grid-area: subject-input;
+    width: 94%;
+    font-family: 'Raleway', sans-serif;
+}
+#message{
+    grid-area: message-input;
+    resize: vertical;
+    font-family: 'Raleway', sans-serif;
+}
+@media(min-width:1700px){
+  header{
+    height: 6%;
   }
-  .slide__button:hover{
-    transform: scale(1.05);
+}
+
+@media(max-width: 1024px){
+  .navbar .links,
+  .navbar .action_btn{
+      display: none;
   }
 
-  @media(min-width:1700px){
-    header{
-      height: 6%;
-    }
+  .navbar .toggle_btn{
+      display: block;
   }
 
-  @media(max-width: 1024px){
-    .navbar .links,
-    .navbar .action_btn{
-        display: none;
-    }
-  
-    .navbar .toggle_btn{
-        display: block;
-    }
-  
-    .dropdown_menu{
-        display: block;
-    }
+  .dropdown_menu{
+      display: block;
   }
-  
-  @media(max-width: 640px){
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
-    .text-box {
-      font-size: 35px;
-      letter-spacing: 5px;
-      word-spacing: 10px;
-    }
-    .button {
-      font-size: 12px;
-      padding: 10px;
-      margin-left:10px;
-      margin-right:10px;
-      word-spacing: normal;
-      letter-spacing: 3px;
-    }
+}
+
+@media(max-width: 640px){
+  .dropdown_menu{
+      left: 2rem;
+      width: unset;
   }
+  .text-box {
+    font-size: 35px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+  }
+  .button {
+    font-size: 12px;
+    padding: 10px;
+    margin-left:10px;
+    margin-right:10px;
+    word-spacing: normal;
+    letter-spacing: 3px;
+  }
+}
